@@ -27,7 +27,9 @@ def mod_9(number):
 
 
 def app():
-    d = st.date_input("When's your birthday", value="today")
+    min_date = datetime.date(1900, 1, 1)
+    max_date = datetime.date(2100, 12, 31)
+    d = st.date_input("When's your birthday",datetime.date(1990, 1, 1), min_value=min_date, max_value=max_date)
     st.write('Your birthday is:', d)
 
     first_name = st.text_input('first name', 'taro')
